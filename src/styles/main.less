@@ -1,36 +1,17 @@
-@prim-color: whitesmoke;
+@prim-color: rgb(88,717,123);
+@lighter-color: rgb(108,205,152);
+@mid-color: rgb(67,186,118);
+@dark-color: rgb(60, 164, 103);
+@darker-color: rgb(45, 116, 74);
+@darkest-color: rgb(12, 65, 34);
 @hover-color : aquamarine;
 @pressed-color: rgb(75, 156, 129);
 
-
-.button-shape{
-
-    width: 50ch;
-    height: 45px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: @prim-color;
-    border-width: 100px;
-    border-radius: 30px;
-    padding: 15px;
-    transition-duration: 50ms;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-
+@font-face {
+    font-family: 'scholarlyambition';
+    src: url('../resources/fonts/scholarlyambition.woff');
 }
 
-.button-shape:hover {
-    background-color: @hover-color;
-    transition-duration: 50ms;
-    transform: scale(1.125);
-}
 
-.button-shape:active {
-    background-color: @pressed-color;
-    transition-duration: 50ms;
-    transform: scale(0.975);
-}
 
 ;

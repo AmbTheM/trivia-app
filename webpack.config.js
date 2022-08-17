@@ -86,15 +86,8 @@ const config = {
       {
         // Apply rule for fonts files
         test: /\.(woff|woff2|ttf|otf|eot)$/,
-        use: [
-          {
-            // Using file-loader too
-            loader: "file-loader",
-            options: {
-              outputPath: "fonts",
-            },
-          },
-        ],
+            type: 'asset/resource',
+            dependency: { not: ['url'] },
       },
     ],
   },
