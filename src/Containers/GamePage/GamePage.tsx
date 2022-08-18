@@ -13,10 +13,7 @@ const HomePage: React.FC = () => {
     <>
     <div className="container">
       <div className="mainframe">
-            <h1 className="titleheader">Carbonteq Trivia Game</h1>
-            <InputBox InputClass="homepage-input" maxLength={25} placeHolder="Please Enter Your Name"/>
-            <Button buttonClass="homepage-button-play" buttonTextClass="homepage-button-text" DisplayText="Play" onClick={() => {}} />      
-            <Button buttonClass="homepage-button-settings" buttonTextClass="homepage-button-text" DisplayText="Settings" onClick={() => {}} />      </div>
+     </div>
 
     </div>
     </>

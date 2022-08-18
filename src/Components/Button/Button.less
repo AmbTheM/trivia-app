@@ -9,7 +9,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: @dark-color;
+    background-color: @darker-color;
     border-width: 100px;
     border-radius: 30px;
     padding: 15px;
@@ -17,7 +17,6 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
-    margin-top: 200px
 
 }
 
@@ -28,7 +27,7 @@
 }
 
 .homepage-button-shape:active {
-    background-color: @darker-color;
+    background-color: @darkest-color;
     transition-duration: 50ms;
     transform: scale(0.975);
 }
@@ -42,3 +41,30 @@
 
 }
 
+
+
+.homepage-button-play:extend(.homepage-button-shape) {
+
+    margin-top: 25px;
+
+    &:hover:extend(.homepage-button-shape:hover){
+
+    }
+
+    &:active:extend(.homepage-button-shape:active){
+
+    }
+}
+.homepage-button-settings:extend(.homepage-button-shape){
+
+    margin-top: 25px;
+    
+
+    &:hover:extend(.homepage-button-shape:hover){
+
+    }
+
+    &:active:extend(.homepage-button-shape:active){
+
+    }
+}
