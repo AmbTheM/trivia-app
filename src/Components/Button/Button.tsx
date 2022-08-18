@@ -1,24 +1,20 @@
-import React from "react"
-import ReactDOm from "react-dom"
+import React from "react";
+import ReactDOm from "react-dom";
 
-
-interface Props
-{
-    DisplayText: string;
-    key?:number;
-    onClick: (e:any) => void;
-
+interface Props {
+  DisplayText: string;
+  key?: number;
+  onClick: any;
 }
 
-const Button: React.FC<Props> = ({DisplayText, key, onClick}) =>{
-
-    return (
-        <>
-        <div className="button-shape" key={key} onClick={onClick}>
-            {DisplayText}
-        </div>
-        </>
-    )
-}
+const Button: React.FC<Props> = ({ DisplayText, key, onClick }) => {
+  return (
+    <>
+      <div className="button-shape" key={key} onClick={onClick}>
+        {DisplayText}
+      </div>
+    </>
+  );
+};
 
 export default Button;
