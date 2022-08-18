@@ -11,6 +11,11 @@ interface Props
     buttonTextClass: string;
 
 
+
+interface Props {
+  DisplayText: string;
+  key?: number;
+  onClick: any;
 }
 
 const Button: React.FC<Props> = ({DisplayText, key, onClick, buttonClass, buttonTextClass}) =>{
@@ -22,6 +27,6 @@ const Button: React.FC<Props> = ({DisplayText, key, onClick, buttonClass, button
         </div>
         </>
     )
-}
+
 
 export default Button;
