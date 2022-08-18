@@ -53,7 +53,11 @@ const config = {
             loader: "style-loader",
           },
           {
-            loader: "css-loader", // translates CSS into CommonJS
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              modules: true,
+            },
           },
           {
             loader: "less-loader",
