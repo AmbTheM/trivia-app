@@ -53,7 +53,11 @@ const config = {
             loader: "style-loader",
           },
           {
-            loader: "css-loader", // translates CSS into CommonJS
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              modules: true,
+            },
           },
           {
             loader: "less-loader",
@@ -86,15 +90,8 @@ const config = {
       {
         // Apply rule for fonts files
         test: /\.(woff|woff2|ttf|otf|eot)$/,
-        use: [
-          {
-            // Using file-loader too
-            loader: "file-loader",
-            options: {
-              outputPath: "fonts",
-            },
-          },
-        ],
+            type: 'asset/resource',
+            dependency: { not: ['url'] },
       },
     ],
   },

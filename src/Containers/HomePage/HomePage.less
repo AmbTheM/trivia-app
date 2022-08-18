@@ -1,0 +1,114 @@
+@import "../../styles/main.less";
+
+.container {
+  border-width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: @darkest-color;
+}
+
+.mainframe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60vw;
+  height: 60vh;
+  background-color: @prim-color;
+  border-radius: 50px 0px 50px 0px;
+  box-shadow: 30px 20px 100px rgba(56, 31, 21, 0.603);
+  overflow: hidden;
+}
+
+.titleheader {
+  font-family: "scholarlyambition";
+  font-size: 4.5vw;
+  font-weight: 300;
+  text-align: center;
+  color: @darkest-color;
+}
+
+.button {
+  font-family: "scholarlyambition";
+  font-size: 2vw;
+  width: auto;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @darker-color;
+  border-width: 100px;
+  border-radius: 30px;
+  padding: 15px;
+  transition-duration: 50ms;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.button:hover {
+  background-color: @mid-color;
+  transition-duration: 50ms;
+  transform: scale(1.125);
+}
+
+.button:active {
+  background-color: @darkest-color;
+  transition-duration: 50ms;
+  transform: scale(0.975);
+}
+
+.buttontext {
+  font-family: "scholarlyambition";
+  font-size: 3vw;
+  padding: 25px;
+  color: white;
+  font-weight: 300;
+}
+
+.buttonplay:extend(.button) {
+  margin-top: 25px;
+
+  &:hover:extend(.button:hover) {
+  }
+
+  &:active:extend(.button:active) {
+  }
+}
+.buttonsettings:extend(.button) {
+  margin-top: 25px;
+
+  &:hover:extend(.button:hover) {
+  }
+
+  &:active:extend(.button:active) {
+  }
+}
+
+.input {
+  width: 2em;
+  font-family: "scholarlyambition";
+  font-size: 2.5vw;
+  text-align: center;
+  width: auto;
+  padding: 10px;
+  border-width: 8px;
+  border-color: @darker-color;
+  border-radius: 50px;
+  border-style: solid;
+  transition-duration: 50ms;
+  margin-top: 2%;
+  background-color: white;
+}
+
+.input:focus {
+  transform: scale(1.125);
+  transition-duration: 50ms;
+}
+
+.input::placeholder {
+  color: @dark-color;
+}

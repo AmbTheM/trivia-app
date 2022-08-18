@@ -1,21 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Button from "./Components/Button/Button";
-import getQuestions from "./Services/ApiCalling";
+import HomePage from "./Containers/HomePage/HomePage";
+import GamePage from "./Containers/GamePage/GamePage"
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 const App: React.FC = () => {
   return (
     <>
-      <div>
-        <h2>Trivia App</h2>
-        <p>Less go</p>
-        <Button
-          key={1}
-          DisplayText=""
-          onClick={() => {
-            console.log(getQuestions(5, "hard", 10));
-          }}
-        />
-      </div>
+    <Router><Routes><Route path="/" element={<HomePage/>}/> <Route path="/game" element={<GamePage/>}/></Routes></Router>
     </>
   );
 };

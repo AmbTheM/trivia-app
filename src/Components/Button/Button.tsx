@@ -1,5 +1,16 @@
-import React from "react";
-import ReactDOm from "react-dom";
+import React from "react"
+import ReactDOm from "react-dom"
+
+
+interface Props
+{
+    DisplayText: string;
+    key?:number;
+    onClick: (e:any) => void;
+    buttonClass: string;
+    buttonTextClass: string;
+
+
 
 interface Props {
   DisplayText: string;
@@ -7,14 +18,15 @@ interface Props {
   onClick: any;
 }
 
-const Button: React.FC<Props> = ({ DisplayText, key, onClick }) => {
-  return (
-    <>
-      <div className="button-shape" key={key} onClick={onClick}>
-        {DisplayText}
-      </div>
-    </>
-  );
-};
+const Button: React.FC<Props> = ({DisplayText, key, onClick, buttonClass, buttonTextClass}) =>{
+
+    return (
+        <>
+        <div className={buttonClass} key={key} onClick={onClick}>
+            <h1 className={buttonTextClass}>{DisplayText}</h1>
+        </div>
+        </>
+    )
+
 
 export default Button;
